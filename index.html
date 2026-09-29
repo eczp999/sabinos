@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sabino's Lanches — Prensados em Londrina | Av. Maringá, 1550</title>
+
+<meta name="description" content="Hamburgueria em Londrina especializada em prensados: 170g de carne, pão dourado na chapa e a maionese secretinha da casa. Av. Maringá, 1550. Peça pelo delivery.">
+<meta name="theme-color" content="#5D0E0B">
+<link rel="canonical" href="https://www.sabinoslanches.com.br/">
+
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Sabino's Lanches">
+<meta property="og:title" content="Sabino's Lanches — Aqui se divulga o protagonista">
+<meta property="og:description" content="Prensado na chapa, 170g de carne e a maionese secretinha. Londrina, Av. Maringá 1550.">
+<meta property="og:image" content="assets/img/menu/sabinos.webp">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%235D0E0B'/%3E%3Cpath d='M7 20l3-8 3 5 3-7 3 7 3-5 3 8z' fill='%23D17D0A'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/estilo.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Sabino's Lanches",
+  "servesCuisine": ["Hambúrguer", "Lanches prensados"],
+  "priceRange": "$$",
+  "image": "assets/img/menu/sabinos.webp",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avenida Maringá, 1550",
+    "addressLocality": "Londrina",
+    "addressRegion": "PR",
+    "postalCode": "86060-000",
+    "addressCountry": "BR"
+  },
+  "sameAs": ["https://www.instagram.com/sabinoslanche/"],
+  "hasMenu": "https://pedido.anota.ai/loja/sabinos-lanches",
+  "acceptsReservations": false,
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday","Monday","Wednesday","Thursday"], "opens": "18:00", "closes": "23:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "18:00", "closes": "00:00" }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<a class="pular-para-conteudo" href="#cardapio">Pular para o cardápio</a>
+
+<!-- ====================== TOPO ====================== -->
+<header class="topo" id="topo">
+  <div class="topo__interno">
+
+    <a class="marca" href="#inicio" aria-label="Sabino's Lanches, início">
+      <span class="marca__selo" aria-hidden="true">
+        <svg viewBox="0 0 40 40" focusable="false"><circle cx="20" cy="20" r="20" fill="currentColor"/><path d="M8 26l4-11 4 7 4-9 4 9 4-7 4 11z" fill="#D17D0A"/></svg>
+      </span>
+      <span class="marca__texto">
+        <b>Sabino&rsquo;s</b>
+        <i>Lanches · Londrina</i>
+      </span>
+    </a>
+
+    <nav class="navegacao" id="navegacao" aria-label="Navegação principal">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#historia">A casa</a>
+      <a href="#maioneses">Maioneses</a>
+      <a href="#visite">Visite</a>
+    </nav>
+
+    <div class="topo__acoes">
+      <span class="selo-status" id="seloStatus" aria-live="polite">
+        <i class="selo-status__ponto" aria-hidden="true"></i><span id="seloStatusTexto">Verificando…</span>
+      </span>
+      <a class="botao botao--laranja botao--pequeno" href="#" data-pedir="Botão do topo">Peça agora</a>
+      <button class="hamburguer" id="abrirMenu" aria-label="Abrir menu" aria-expanded="false" aria-controls="navegacao">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<main>
+
+<!-- ====================== HERÓI ====================== -->
+<section class="heroi" id="inicio">
+  <div class="heroi__fundo" aria-hidden="true"></div>
+
+  <div class="interno heroi__grade">
+
+    <div class="heroi__texto">
+      <p class="sobrancelha">Hamburgueria · Londrina · desde 2025</p>
+
+      <h1 class="heroi__titulo">
+        Aqui se divulga<br>
+        <span class="destaque-rabisco">
+          o protagonista
+          <svg class="rabisco" viewBox="0 0 420 26" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path d="M4 17C70 7 150 5 218 9c62 4 128 10 198 4" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>
+          </svg>
+        </span>
+      </h1>
+
+      <p class="heroi__linha">
+        E o protagonista nunca fomos nós. É o lanche: prensado na chapa até o pão dourar,
+        <b>170g de carne</b> e a <b>maionese secretinha</b> que ninguém consegue copiar.
+      </p>
+
+      <div class="heroi__botoes">
+        <a class="botao botao--laranja" href="#cardapio">
+          Ver o cardápio
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a class="botao botao--contorno" href="#" data-pedir="Botão do herói">Pedir delivery</a>
+      </div>
+
+      <dl class="heroi__numeros">
+        <div><dt>Carne por lanche</dt><dd>170<small>g</small></dd></div>
+        <div><dt>No Instagram</dt><dd>20<small>mil+</small></dd></div>
+        <div><dt>Maioneses autorais</dt><dd>5</dd></div>
+      </dl>
+    </div>
+
+    <figure class="heroi__figura">
+      <svg class="coroa" viewBox="0 0 120 70" aria-hidden="true" focusable="false">
+        <path d="M10 60 L18 18 L38 42 L60 10 L82 42 L102 18 L110 60 Z" fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+      </svg>
+      <img src="assets/img/menu/sabinos.webp" width="200" height="200"
+           alt="Sabino's, o prensado clássico da casa, cortado ao meio mostrando o queijo derretido"
+           fetchpriority="high" decoding="async">
+      <figcaption>
+        <span>O clássico</span>
+        <b>Sabino&rsquo;s</b>
+        <em>R$&nbsp;43,90</em>
+      </figcaption>
+    </figure>
+
+  </div>
+</section>
+
+<!-- ====================== FAIXA ROLANTE ====================== -->
+<div class="faixa" aria-hidden="true">
+  <div class="faixa__trilho">
+    <div class="faixa__grupo">
+      <span>Prensado na chapa</span><i>✦</i><span>Maionese secretinha</span><i>✦</i><span>170g de carne</span><i>✦</i>
+      <span>Av. Maringá, 1550</span><i>✦</i><span>Fechado só na terça</span><i>✦</i>
+    </div>
+    <div class="faixa__grupo">
+      <span>Prensado na chapa</span><i>✦</i><span>Maionese secretinha</span><i>✦</i><span>170g de carne</span><i>✦</i>
+      <span>Av. Maringá, 1550</span><i>✦</i><span>Fechado só na terça</span><i>✦</i>
+    </div>
+  </div>
+</div>
+
+<!-- ====================== VITRINE ====================== -->
+<section class="secao secao--creme" id="vitrine">
+  <div class="interno">
+    <header class="secao__topo">
+      <p class="sobrancelha sobrancelha--escura">Os mais pedidos</p>
+      <h2 class="titulo">Se é a primeira vez, comece por aqui</h2>
+      <p class="secao__linha">Quatro lanches que resolvem a dúvida. Dois deles estão saindo com desconto agora.</p>
+    </header>
+    <div class="vitrine" id="vitrine-grade"><!-- preenchido por script --></div>
+  </div>
+</section>
+
+<!-- ====================== HISTÓRIA ====================== -->
+<section class="secao secao--vinho" id="historia">
+  <div class="interno historia">
+
+    <div class="historia__texto">
+      <p class="sobrancelha">A casa</p>
+      <h2 class="titulo titulo--claro">O prensado que virou<br>assunto em Londrina</h2>
+
+      <p>A Sabino&rsquo;s abriu em 2025 na Av. Maringá com uma ideia teimosa: em vez de empilhar
+      hambúrguer para caber na foto, <b>prensar</b>. O pão vai à chapa e volta dourado, a carne
+      de 170g solta a gordura dentro do próprio pão e o lanche inteiro se resolve numa mordida só.</p>
+
+      <p>Deu certo rápido. Em poucos meses já eram mais de <b>20 mil pessoas</b> acompanhando a chapa
+      todo dia pelo Instagram, o grafite da parede virou ponto de foto e a calçada da Maringá ganhou
+      mesa na frente. O resto do cardápio veio na mesma lógica: <b>cinco maioneses autorais</b>,
+      batata sequinha e uma linha de duplos para quem acha que 170g é pouco.</p>
+
+      <p class="historia__assinatura">E o slogan continua valendo: aqui se divulga o protagonista.</p>
+    </div>
+
+    <ul class="pilares">
+      <li>
+        <span class="pilares__icone" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M3 15h18M5 15V9a7 7 0 0114 0v6M3 19h18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </span>
+        <h3>A chapa</h3>
+        <p>O pão vai prensado até dourar. É isso que sela o lanche e concentra tudo dentro dele.</p>
+      </li>
+      <li>
+        <span class="pilares__icone" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </span>
+        <h3>170g de carne</h3>
+        <p>Em todo lanche. Nos duplos são 340g, com o queijo escorrendo entre as duas.</p>
+      </li>
+      <li>
+        <span class="pilares__icone" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 3c3 3.5 5 6 5 8.8A5 5 0 017 11.8C7 9 9 6.5 12 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M6 20h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </span>
+        <h3>A secretinha</h3>
+        <p>A maionese da casa está em quase todos os lanches — e é o motivo de muita gente voltar.</p>
+      </li>
+      <li>
+        <span class="pilares__icone" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21s7-5.7 7-11a7 7 0 10-14 0c0 5.3 7 11 7 11z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+        </span>
+        <h3>A parede</h3>
+        <p>Grafite, mesa na calçada e a Maringá passando. Dá para comer ali mesmo, quentinho.</p>
+      </li>
+    </ul>
+
+  </div>
+</section>
+
+<!-- ====================== CARDÁPIO ====================== -->
+<section class="secao secao--creme" id="cardapio">
+  <div class="interno">
+
+    <header class="secao__topo">
+      <p class="sobrancelha sobrancelha--escura">Cardápio completo</p>
+      <h2 class="titulo">Tudo o que sai da nossa chapa</h2>
+      <p class="secao__linha">
+        Clique em qualquer item para ver os detalhes e pedir. O pedido é finalizado no Anota Aí,
+        nossa plataforma oficial de delivery.
+      </p>
+    </header>
+
+    <div class="filtros" id="filtros" role="tablist" aria-label="Categorias do cardápio"><!-- preenchido por script --></div>
+
+    <div id="cardapio-lista"><!-- preenchido por script --></div>
+
+    <p class="aviso-precos">
+      Preços e disponibilidade conforme o Anota Aí. Podem mudar sem aviso — o valor final é sempre o que aparece no pedido.
+    </p>
+
+  </div>
+</section>
+
+<!-- ====================== MAIONESES ====================== -->
+<section class="secao secao--vinho" id="maioneses">
+  <div class="interno">
+    <header class="secao__topo secao__topo--centro">
+      <p class="sobrancelha">Molhos da casa</p>
+      <h2 class="titulo titulo--claro">Cinco maioneses.<br>Uma delas é secreta.</h2>
+      <p class="secao__linha secao__linha--clara">
+        Todas feitas aqui, todas a R$&nbsp;5,50. Duas têm pimenta — e a gente avisa o quanto.
+      </p>
+    </header>
+    <div class="molhos" id="molhos-grade"><!-- preenchido por script --></div>
+  </div>
+</section>
+
+<!-- ====================== VISITE ====================== -->
+<section class="secao secao--creme" id="visite">
+  <div class="interno">
+
+    <header class="secao__topo">
+      <p class="sobrancelha sobrancelha--escura">Onde e quando</p>
+      <h2 class="titulo">Passa lá na Maringá</h2>
+      <p class="secao__linha">Tem mesa na calçada, em frente à loja. Também fazemos retirada e delivery.</p>
+    </header>
+
+    <div class="visite">
+
+      <div class="cartao-info">
+        <h3>Endereço</h3>
+        <address>
+          Avenida Maringá, 1550<br>
+          Vitória &middot; Londrina — PR<br>
+          CEP 86060-000
+        </address>
+        <a class="botao botao--vinho botao--pequeno" href="https://www.google.com/maps/search/?api=1&query=Avenida+Maring%C3%A1+1550+Vit%C3%B3ria+Londrina+PR" target="_blank" rel="noopener">
+          Como chegar
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="cartao-info">
+        <h3>Horários</h3>
+        <table class="tabela-horarios" id="tabelaHorarios"><tbody><!-- preenchido por script --></tbody></table>
+        <p class="cartao-info__nota">Fechamos às terças. Nas sextas e sábados vamos até meia-noite.</p>
+      </div>
+
+      <div class="cartao-info">
+        <h3>Como pagar</h3>
+        <ul class="lista-pagamentos" id="listaPagamentos"><!-- preenchido por script --></ul>
+        <p class="cartao-info__nota">Sem pedido mínimo no delivery.</p>
+        <a class="botao botao--laranja botao--pequeno" href="#" data-pedir="Cartão de pagamentos">Fazer um pedido</a>
+      </div>
+
+    </div>
+
+    <div class="mapa">
+      <iframe
+        title="Mapa com a localização da Sabino's Lanches na Avenida Maringá, Londrina"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-51.1858%2C-23.3162%2C-51.1698%2C-23.3062&amp;layer=mapnik&amp;marker=-23.3112%2C-51.1778"
+        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ====================== RODAPÉ ====================== -->
+<footer class="rodape">
+  <div class="interno rodape__grade">
+
+    <div class="rodape__marca">
+      <span class="marca__selo" aria-hidden="true">
+        <svg viewBox="0 0 40 40" focusable="false"><circle cx="20" cy="20" r="20" fill="currentColor"/><path d="M8 26l4-11 4 7 4-9 4 9 4-7 4 11z" fill="#D17D0A"/></svg>
+      </span>
+      <p><b>Sabino&rsquo;s Lanches</b><br>Aqui se divulga o protagonista.</p>
+      <div class="rodape__sociais">
+        <a href="https://www.instagram.com/sabinoslanche/" target="_blank" rel="noopener" aria-label="Instagram da Sabino's Lanches">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg>
+        </a>
+        <a href="https://pedido.anota.ai/loja/sabinos-lanches" target="_blank" rel="noopener" aria-label="Fazer pedido no Anota Aí">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 7h13l-1.2 9.2a2 2 0 01-2 1.8H9.2a2 2 0 01-2-1.8L6 7zM6 7L5.2 4H3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.3" fill="currentColor"/><circle cx="16" cy="20" r="1.3" fill="currentColor"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <nav class="rodape__links" aria-label="Rodapé">
+      <h4>Navegue</h4>
+      <a href="#cardapio">Cardápio</a>
+      <a href="#historia">A casa</a>
+      <a href="#maioneses">Maioneses</a>
+      <a href="#visite">Visite</a>
+    </nav>
+
+    <div class="rodape__links">
+      <h4>Contato</h4>
+      <a href="https://www.google.com/maps/search/?api=1&query=Avenida+Maring%C3%A1+1550+Vit%C3%B3ria+Londrina+PR" target="_blank" rel="noopener">Av. Maringá, 1550 — Londrina/PR</a>
+      <a href="https://www.instagram.com/sabinoslanche/" target="_blank" rel="noopener">@sabinoslanche</a>
+      <a href="https://pedido.anota.ai/loja/sabinos-lanches" target="_blank" rel="noopener">Pedir no Anota Aí</a>
+    </div>
+
+  </div>
+
+  <div class="interno rodape__base">
+    <p>© <span id="ano">2026</span> Sabino&rsquo;s Lanches · Sabinos Delivery LTDA · CNPJ 58.988.349/0001-63</p>
+    <p>Horários e preços conforme o Anota Aí e o Instagram oficial.</p>
+  </div>
+</footer>
+
+<!-- ====================== MODAL DO PRODUTO ====================== -->
+<div class="modal" id="modal" hidden>
+  <div class="modal__fundo" data-fechar-modal></div>
+
+  <div class="modal__caixa" role="dialog" aria-modal="true" aria-labelledby="modalTitulo" id="modalCaixa">
+
+    <button class="modal__fechar" id="fecharModal" aria-label="Fechar">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+    </button>
+
+    <div class="modal__figura">
+      <img id="modalImagem" alt="" width="200" height="200" decoding="async">
+    </div>
+
+    <div class="modal__corpo">
+      <p class="modal__categoria" id="modalCategoria"></p>
+      <h3 id="modalTitulo"></h3>
+      <p class="modal__desc" id="modalDesc"></p>
+
+      <div class="modal__ardencia" id="modalArdencia" hidden></div>
+
+      <div class="modal__preco" id="modalPreco"></div>
+
+      <p class="modal__aviso">
+        O pedido é finalizado no <b>Anota Aí</b>, nossa plataforma oficial. Você escolhe os adicionais e a forma de pagamento por lá.
+      </p>
+
+      <div class="modal__acoes">
+        <a class="botao botao--laranja botao--bloco" id="modalAnota" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 7h13l-1.2 9.2a2 2 0 01-2 1.8H9.2a2 2 0 01-2-1.8L6 7zM6 7L5.2 4H3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.3" fill="currentColor"/><circle cx="16" cy="20" r="1.3" fill="currentColor"/></svg>
+          Pedir no Anota Aí
+        </a>
+        <a class="botao botao--zap botao--bloco" id="modalZap" href="#" target="_blank" rel="noopener" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 11.8a8 8 0 01-11.9 7L4 20l1.3-3.9A8 8 0 1120 11.8z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M9.2 9.3c.3 2.6 2.9 5.2 5.5 5.5l1-1.4 1.6.8-.5 1.6c-2.9.6-7.4-3-8.6-6.4l1.5-.7.8 1.6-1.3.4z" fill="currentColor"/></svg>
+          Chamar no WhatsApp
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ====================== BOTÃO FLUTUANTE (MOBILE) ====================== -->
+<a class="flutuante" id="flutuante" href="#" data-pedir="Botão flutuante">
+  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 7h13l-1.2 9.2a2 2 0 01-2 1.8H9.2a2 2 0 01-2-1.8L6 7zM6 7L5.2 4H3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.3" fill="currentColor"/><circle cx="16" cy="20" r="1.3" fill="currentColor"/></svg>
+  Peça agora
+</a>
+
+<script src="assets/js/dados.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

@@ -303,7 +303,10 @@ h1, h2, h3, .titulo {
 .heroi__titulo {
   font-size: var(--t-gigante);
   color: var(--creme);
-  margin-bottom: 1.4rem;
+  /* Em `em` de propósito: o traço à mão desce .42em abaixo da última linha,
+     então a folga precisa acompanhar o tamanho da fonte. Com valor fixo em rem
+     o traço encostava no parágrafo nas telas grandes. */
+  margin-bottom: .78em;
   text-wrap: balance;
 }
 
@@ -373,15 +376,24 @@ h1, h2, h3, .titulo {
   border-block: 3px solid var(--vinho-escuro);
   overflow: hidden; padding-block: .7rem;
 }
-.faixa__trilho { display: flex; width: max-content; animation: correr 34s linear infinite; }
+/* O trilho anda exatamente a largura de UM grupo e reinicia — por isso a emenda
+   é invisível. Quantos grupos existem e a duração quem define é o site.js, que
+   mede a tela: com número fixo de cópias, em monitor largo o conteúdo acabava
+   antes do fim da volta e sobrava um buraco. */
+.faixa__trilho {
+  display: flex; width: max-content;
+  animation: correr var(--faixa-dur, 34s) linear infinite;
+}
 .faixa__grupo { display: flex; align-items: center; flex: none; }
 .faixa__grupo span {
   font-family: 'Anton', sans-serif; font-size: 1.05rem;
   letter-spacing: .06em; text-transform: uppercase; padding-inline: 1.3rem; white-space: nowrap;
 }
 .faixa__grupo i { font-style: normal; opacity: .55; font-size: .8rem; }
-@keyframes correr { to { transform: translateX(-50%); } }
-.faixa:hover .faixa__trilho { animation-play-state: paused; }
+@keyframes correr {
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(-1 * var(--faixa-largura))); }
+}
 
 /* ============ 07. VITRINE ============ */
 .vitrine {
@@ -709,7 +721,7 @@ h1, h2, h3, .titulo {
 
   /* Compacta o herói o suficiente para o lanche já espiar na dobra —
      numa hamburgueria, ver o produto sem rolar vale mais que respiro. */
-  .heroi__titulo   { margin-bottom: 1.9rem; }
+  .heroi__titulo   { margin-bottom: .74em; }
   .heroi__linha    { margin-bottom: 1.5rem; font-size: 1.0625rem; }
   .heroi__botoes   { gap: .6rem; margin-bottom: 1.6rem; }
   .heroi__botoes .botao { flex: 1 1 auto; }
@@ -740,6 +752,7 @@ h1, h2, h3, .titulo {
     scroll-behavior: auto !important;
   }
   .revelar { opacity: 1; transform: none; }
+  .faixa__trilho { animation: none !important; transform: none !important; }
   .destaque-rabisco .rabisco path { stroke-dashoffset: 0; }
   .heroi__figura img { animation: none; }
 }

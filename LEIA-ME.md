@@ -1,4 +1,4 @@
-# Sabino's Lanches — Site V1
+# Sabino's Lanches — Site V2
 
 Site institucional + cardápio digital. HTML, CSS e JavaScript puros: sem build,
 sem framework, sem dependência externa além das fontes do Google.
@@ -150,3 +150,30 @@ Mantive de propósito os "erros" que são voz da marca: *muiiitoo* Catupiry,
   estruturados `Restaurant` (endereço + horários) para o Google.
 - Responsivo testado em 375, 760, 1180 e 1280 px. Sem rolagem horizontal.
 - Imprime legível (o cardápio sai em preto sobre branco).
+
+---
+
+## 7. Histórico de versões
+
+### V2
+Três correções pedidas depois de ver o V1 rodando em tela cheia:
+
+1. **A faixa laranja agora é infinita de verdade.** Antes ela tinha duas cópias
+   fixas do texto. Como cada cópia mede 962 px, em qualquer monitor mais largo
+   que isso o conteúdo acabava antes do fim da volta e aparecia um buraco — num
+   monitor de 1912 px sobravam 950 px de vazio. Agora o `site.js` mede a tela e
+   clona quantos grupos forem necessários (3 no celular, 4 em Full HD, 5 em
+   ultrawide), recalculando ao redimensionar a janela e depois que a fonte
+   carrega.
+2. **A faixa não para mais com o mouse em cima.** Havia uma regra
+   `animation-play-state: paused` no hover; foi removida.
+3. **A linha à mão sob "o protagonista" não encosta mais no parágrafo.** A folga
+   abaixo do título passou a ser medida em `em` em vez de `rem`, porque o traço
+   desce `.42em` abaixo da última linha — com valor fixo ele invadia o texto
+   justamente nas telas grandes, onde a fonte é maior.
+
+De quebra, a velocidade da faixa virou constante (32 px/s em qualquer largura;
+antes era um tempo fixo, então quanto mais largo o texto, mais rápido corria).
+
+### V1
+Primeira versão publicada.

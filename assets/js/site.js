@@ -414,7 +414,52 @@
   }
 
   /* ====================================================================
-     9. REVELAR AO ROLAR
+     9. FAIXA ROLANTE
+     A animação desloca o trilho exatamente a largura de um grupo e reinicia,
+     então a emenda não aparece. O que precisa ser calculado é QUANTOS grupos
+     existem: no fim de cada volta o primeiro já saiu da tela, e o que restou
+     tem de cobrir a largura toda do monitor. Em tela larga, duas cópias fixas
+     não cobriam — era o buraco que aparecia.
+     ==================================================================== */
+  const VELOCIDADE_FAIXA = 32; // px por segundo — ritmo calmo, dá para ler
+
+  function ligarFaixa() {
+    const trilho = $('.faixa__trilho');
+    if (!trilho) return;
+
+    const montar = () => {
+      const grupos = $$('.faixa__grupo', trilho);
+      if (!grupos.length) return;
+
+      // volta a um único grupo antes de medir, senão a conta acumula
+      grupos.slice(1).forEach((g) => g.remove());
+      const modelo = grupos[0];
+      const largura = modelo.getBoundingClientRect().width;
+      if (!largura) return;
+
+      // +1 grupo para o que sai de cena, +1 de folga
+      const necessarios = Math.ceil(window.innerWidth / largura) + 2;
+      const fragmento = document.createDocumentFragment();
+      for (let i = 1; i < necessarios; i++) fragmento.appendChild(modelo.cloneNode(true));
+      trilho.appendChild(fragmento);
+
+      trilho.style.setProperty('--faixa-largura', largura + 'px');
+      trilho.style.setProperty('--faixa-dur', (largura / VELOCIDADE_FAIXA).toFixed(2) + 's');
+    };
+
+    montar();
+    // a largura muda quando a fonte real substitui a de fallback
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(montar);
+
+    let espera;
+    window.addEventListener('resize', () => {
+      clearTimeout(espera);
+      espera = setTimeout(montar, 200);
+    });
+  }
+
+  /* ====================================================================
+     10. REVELAR AO ROLAR
      ==================================================================== */
   function ligarRevelacao() {
     const semMovimento = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -446,7 +491,7 @@
   }
 
   /* ====================================================================
-     10. PARTIDA
+     11. PARTIDA
      ==================================================================== */
   function iniciar() {
     montarVitrine();
@@ -457,6 +502,7 @@
     ligarBotoesDePedido();
     ligarModal();
     ligarTopo();
+    ligarFaixa();
     ligarRevelacao();
     atualizarSelo();
     setInterval(atualizarSelo, 60000); // o selo se corrige sozinho a cada minuto
